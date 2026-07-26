@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider" id="slider">
+        <!-- 1. Added the viewport wrapper to clip the overflowing slides -->
+        <div class="slider-viewport">
+            <div class="slider-track">
+                <div class="slide"><img src="images/image1.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="images/image2.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="images/image3.jpg" alt="Slide 3"></div>
+                <div class="slide"><img src="images/image4.png" alt="Slide 4"></div>
+            </div>
+        </div>
+
+        <!-- 2. Added the controls wrapper for layout and the dots container for JS -->
+        <div class="slider-controls">
+            <button class="slider-btn prev">&#10094;</button>
+            <div class="slider-dots"></div> 
+            <button class="slider-btn next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- 3. Moved the script to the bottom of the body -->
+    <script src="slider.js"></script>
+    
+    <!-- 4. Actually initialize the slider class you wrote! -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new Slider('#slider');
+        });
+    </script>
+</body>
+</html>
